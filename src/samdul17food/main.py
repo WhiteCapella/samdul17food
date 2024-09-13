@@ -9,6 +9,7 @@ app = FastAPI()
 # CORS 설정 추가
 origins = [
     "https://samdul17food.web.app"  # 허용할 출처 (Firebase 호스팅 URL)
+    "http://127.0.0.1:1002"
 ]
 
 app.add_middleware(
