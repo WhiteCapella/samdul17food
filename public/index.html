@@ -18,7 +18,7 @@
             event.preventDefault(); // 폼 기본 제출 방지
 
             const foodName = document.getElementById("foodName").value;
-            const url = `http://ec2-43-203-204-195.ap-northeast-2.compute.amazonaws.com/n00/food?name=${encodeURIComponent(foodName)}`;
+            const url = `http://ec2-43-203-204-195.ap-northeast-2.compute.amazonaws.com/n17/food?name=${encodeURIComponent(foodName)}`;
 
             fetch(url, {
                 method: 'GET',
@@ -27,6 +27,24 @@
                 console.error('Error:', error);
             });
         });
+	<script type="module">
+  	// Import the functions you need from the SDKs you need
+  	import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+  	// TODO: Add SDKs for Firebase products that you want to use
+  	// https://firebase.google.com/docs/web/setup#available-libraries
+
+  	// Your web app's Firebase configuration
+  	const firebaseConfig = {
+    	apiKey: "AIzaSyCLRdmZ2mPocJJSWNx5J-abKmFCdkajo8M",
+    	authDomain: "samdul17food.firebaseapp.com",
+    	projectId: "samdul17food",
+    	storageBucket: "samdul17food.appspot.com",
+    	messagingSenderId: "678263045686",
+    	appId: "1:678263045686:web:8e63e905ccdfd69d94a297"
+  	};
+
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
     </script>
 </body>
 </html>
