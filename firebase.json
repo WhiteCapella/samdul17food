@@ -1,10 +1,21 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "hosting": {
+        "public": "public",
+        "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+        ],
+    "headers": [
+        {
+        "source": "/n17/food",
+        "headers": [
+            {
+            "key": "Access-Control-Allow-Origin",
+            "value": "https://samdul17food.web.app"
+            }
+            ]
+        }
     ]
-  }
+    }
 }
