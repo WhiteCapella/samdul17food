@@ -1,9 +1,23 @@
 from typing import Union
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import datetime
 import pickle
 
 app = FastAPI()
+
+# CORS 설정 추가
+origins = [
+    "https://samdul17food.web.app"  # 허용할 출처 (Firebase 호스팅 URL)
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def read_root():
